@@ -17,7 +17,7 @@ TOOL_OBJS  := $(TOOL_SRCS:.cpp=.o)
 SYNCBENCH_OBJS := $(SYNCBENCH_SRCS:.cpp=.o)
 DEPS       := $(CHECK_SRCS:.cpp=.d) $(TOOL_SRCS:.cpp=.d) $(SYNCBENCH_SRCS:.cpp=.d)
 
-
+CXX = clang++
 .PHONY: phony
 
 all: phony verify-submodules quadb check
