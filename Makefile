@@ -1,15 +1,16 @@
-W        = -Wall
+W        = -Wall -pthread -fopenmp
 OPT      = -O2 -g
-STD      = -std=c++17
+STD      = -std=c++17 
 CXXFLAGS = $(STD) $(OPT) $(W) -fPIC $(XCXXFLAGS)
 INCS     = -Iinclude -Iexternal -Iexternal/hoytech-cpp -Iexternal/docopt.cpp
 
-LDLIBS   = -llmdb -lb2 -pthread
-LDFLAGS  = -flto $(XLDFLAGS)
 
-CHECK_SRCS = check.cpp
-SYNCBENCH_SRCS = syncBench.cpp
-TOOL_SRCS  = quadb.cpp
+LDLIBS   = -llmdb -lb2 -pthread
+LDFLAGS  = -lpthread -lgmp -lstdc++ -lomp -lgmpxx -lbenchmark -flto $(XLDFLAGS)
+
+CHECK_SRCS = src/check.cpp
+SYNCBENCH_SRCS = src/syncBench.cpp
+TOOL_SRCS  = src/quadb.cpp
 
 
 CHECK_OBJS := $(CHECK_SRCS:.cpp=.o)
