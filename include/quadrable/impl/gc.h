@@ -1,3 +1,5 @@
+#include <optional>
+
 public:
 
 struct GCStats {
