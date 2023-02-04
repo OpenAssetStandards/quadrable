@@ -74,7 +74,7 @@ static std::string slurpStdin() {
 
 
 void run(int argc, char **argv) {
-    std::map<std::string, docopt::value> args = docopt::docopt(USAGE, { argv + 1, argv + argc }, true, "quadb " QUADRABLE_VERSION);
+    std::map<std::string, docopt::value> args = docopt::docopt(USAGE, { argv + 1, argv + argc }, true, "quadb " "1.0.g");
 
 
     std::string dbDir;
