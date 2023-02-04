@@ -7,3 +7,6 @@
 [submodule "external/docopt.cpp"]
 	path = external/docopt.cpp
 	url = https://github.com/docopt/docopt.cpp.git
+[submodule "external/goldilocks"]
+	path = external/goldilocks
+	url = https://github.com/OpenAssetStandards/goldilocks
