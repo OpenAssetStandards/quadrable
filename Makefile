@@ -1,12 +1,11 @@
-W        = -Wall -pthread -fopenmp
+W        = -Wall
 OPT      = -O2 -g
-STD      = -std=c++17 
+STD      = -std=c++17
 CXXFLAGS = $(STD) $(OPT) $(W) -fPIC $(XCXXFLAGS)
 INCS     = -Iinclude -Iexternal -Iexternal/hoytech-cpp -Iexternal/docopt.cpp
 
-
 LDLIBS   = -llmdb -lb2 -pthread
-LDFLAGS  = -lpthread -lgmp -lstdc++ -lomp -lgmpxx -lbenchmark -flto $(XLDFLAGS)
+LDFLAGS  = -flto $(XLDFLAGS)
 
 CHECK_SRCS = check.cpp
 SYNCBENCH_SRCS = syncBench.cpp
